@@ -6,9 +6,6 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
   <link href="Styles/custom.css" rel="stylesheet" />
-  <!-- AngularJS -->
-  <script src="Scripts/Shared/angular.min.js"></script>
-  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 </head>
 
 <body ng-controller="Main as main" style="background-image: url('{{main.randomImage.url}}')" ng-cloak>
@@ -76,7 +73,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
     <div class="row">
@@ -100,7 +96,11 @@
       </div>
     </div>
   </div>
-
+  <!-- AngularJS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <!-- Angular Local Storage -->
   <script src="Scripts/angular-local-storage.min.js"></script>
   <!-- Modules -->
   <script src="Scripts/app.js"></script>
