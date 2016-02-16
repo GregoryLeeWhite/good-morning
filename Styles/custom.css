@@ -1,0 +1,164 @@
+body {
+  margin: 0;
+  -webkit-animation: fadein 4s;
+  /* Safari and Chrome */
+  -moz-animation: fadein 4s;
+  /* Firefox */
+  -ms-animation: fadein 4s;
+  /* Internet Explorer */
+  -o-animation: fadein 4s;
+  /* Opera */
+  animation: fadein 4s;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: #FFFFFF;
+  overflow-x:hidden;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+#background, #background li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: no-repeat;
+}
+
+#background {
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+}
+
+input {
+  margin: 0 auto;
+  display: block;
+  background: 0;
+  border: 0;
+  border-bottom: 3px solid #fff;
+  color: #fff;
+  outline: 0;
+  text-align: center;
+  font-size: 70px;
+  width: 100%;
+}
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #FFFFFF;
+}
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #FFFFFF;
+  opacity: 1;
+}
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #FFFFFF;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #FFFFFF;
+}
+:placeholder-shown {
+  /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+  color: #FFFFFF;
+}
+.btn-clear, .btn-clear:hover {
+  background-color: transparent;
+  border: 3px solid #FFFFFF;
+  font-size: 23px;
+  margin-top: 10px;
+  width: 100%;
+  color: #FFFFFF !important;
+}
+.h1, h1 {
+  font-size: 145px;
+  font-weight: bold;
+  text-align: center;
+  color: #FFFFFF;
+}
+.center {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.greeting {
+  font-size: 75px;
+  font-weight: bold;
+}
+.main-div {
+  margin: 0;
+}
+.city-name, .weather-data, h2 {
+  text-align: center;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+.weather-container {
+  box-shadow: 6px 5px 25px black;
+  background: rgba(0, 123, 154, 1);
+  background: -moz-linear-gradient(left, rgba(0, 123, 154, 1) 0%, rgba(0, 103, 124, 1) 99%, rgba(0, 103, 124, 1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0, 123, 154, 1)), color-stop(99%, rgba(0, 103, 124, 1)), color-stop(100%, rgba(0, 103, 124, 1)));
+  background: -webkit-linear-gradient(left, rgba(0, 123, 154, 1) 0%, rgba(0, 103, 124, 1) 99%, rgba(0, 103, 124, 1) 100%);
+  background: -o-linear-gradient(left, rgba(0, 123, 154, 1) 0%, rgba(0, 103, 124, 1) 99%, rgba(0, 103, 124, 1) 100%);
+  background: -ms-linear-gradient(left, rgba(0, 123, 154, 1) 0%, rgba(0, 103, 124, 1) 99%, rgba(0, 103, 124, 1) 100%);
+  background: linear-gradient(to right, rgba(0, 123, 154, 1) 0%, rgba(0, 103, 124, 1) 99%, rgba(0, 103, 124, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#007b9a', endColorstr='#00677c', GradientType=1);
+}
+.city-name {
+  background: rgba(0, 146, 175, 1);
+  background: -moz-linear-gradient(left, rgba(0, 146, 175, 1) 0%, rgba(0, 129, 153, 1) 99%, rgba(0, 129, 153, 1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0, 146, 175, 1)), color-stop(99%, rgba(0, 129, 153, 1)), color-stop(100%, rgba(0, 129, 153, 1)));
+  background: -webkit-linear-gradient(left, rgba(0, 146, 175, 1) 0%, rgba(0, 129, 153, 1) 99%, rgba(0, 129, 153, 1) 100%);
+  background: -o-linear-gradient(left, rgba(0, 146, 175, 1) 0%, rgba(0, 129, 153, 1) 99%, rgba(0, 129, 153, 1) 100%);
+  background: -ms-linear-gradient(left, rgba(0, 146, 175, 1) 0%, rgba(0, 129, 153, 1) 99%, rgba(0, 129, 153, 1) 100%);
+  background: linear-gradient(to right, rgba(0, 146, 175, 1) 0%, rgba(0, 129, 153, 1) 99%, rgba(0, 129, 153, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#0092af', endColorstr='#008199', GradientType=1);
+}
+.forecast-icon {
+  width: 100%;
+}
+.forecast-child-0, .forecast-child-1, .forecast-child-2, .forecast-child-3 {
+  min-height: 23%;
+}
+.forecast-child-0 {
+  background-color: rgb(0, 98, 119);
+}
+.forecast-child-1 {
+  background-color: rgb(0, 182, 221);
+}
+.forecast-child-2 {
+  background-color: rgb(0, 154, 188);
+}
+.forecast-child-3 {
+  background-color: rgb(0, 123, 154);
+}
+.forecast-highlow-label {
+  font-size: 2.4vw;;
+  color: #FFFFFF;
+  font-weight: 100;
+}
+.forecast-highlow-temp {
+  font-size: 2.4vw;;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+.forecast-highlow-temp-otherday {
+  font-size: 23px;
+  font-weight: bold;
+}
+.forecast-more-details, .icon-umbrella, .icon-flag, .icon-compass {
+  color: #FFFFFF;
+  font-size: 15px;
+}
+.forecast-more-details {
+  padding-left: 7px;
+}
+#forecast-wind {
+  padding-left: 4px !important;
+}

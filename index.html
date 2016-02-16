@@ -1,0 +1,118 @@
+<!DOCTYPE>
+<html ng-app="ForecastApp">
+
+<head>
+  <title></title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  <link href="Styles/custom.css" rel="stylesheet" />
+  <!-- AngularJS -->
+  <script src="Scripts/Shared/angular.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+</head>
+
+<body ng-controller="Main as main" style="background-image: url('{{main.randomImage.url}}')" ng-cloak>
+  <ul id="background"><li class="fadein" style="background-image: url('{{main.randomImage.url}}');"></li></ul>
+  <div class="main-div">
+    <div class="weather-container col-sm-offset-8 col-sm-4">
+      <div class="row city-name">
+        <h2>{{main.userLocation.location.city}}</h2>
+      </div>
+      <!--<div class="row" ng-repeat="days in main.fiveDay.forecast.simpleforecast.forecastday | limitTo:5">
+        <div class="col-sm-4">
+          <h4 class="weather-data">{{ days.date.pretty }}</h4>
+        </div>-->
+        <!--<div class="col-sm-4 weather-data">
+          <h4 class="weather-data"> F</h4>
+        </div>
+        <div class="col-sm-4 weather-data" ng-repeat="weatherDetails in days.weather">
+          <img ng-src="" />
+          <img ng-src="Styles\icons\sun-with-2cloud-rain.png" class="weather-icon" />
+        </div>
+      </div>-->
+      <div class="row">
+        <div ng-repeat="days in main.fiveDay.forecast.simpleforecast.forecastday | limitTo:5">
+          <div class="col-sm-6 forecast-child-{{$index}}" ng-if="$index == 0" >
+            <div class="col-sm-6">
+              <div class="row">
+                <span class="forecast-highlow-label">H: </span><span class="forecast-highlow-temp">{{ days.high.fahrenheit }}&deg;</span>
+              </div>
+              <div class="row">
+                <span class="forecast-highlow-label">L: </span><span class="forecast-highlow-temp">{{ days.low.fahrenheit }}&deg;</span>
+              </div>
+              <div class="row">
+                <i class="icon-umbrella"></i> <span class="forecast-more-details">{{days.pop}}%</span>
+              </div>
+              <div class="row">
+                <i class="icon-flag"></i> <span class="forecast-more-details" id="forecast-wind">{{days.avewind.mph}}mph</span>
+              </div>
+              <div class="row">
+                <i class="icon-compass"></i> <span class="forecast-more-details">{{days.avewind.dir}}</span>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="row">
+                <img class="forecast-icon" ng-src="Styles/icons/{{ days.icon }}.png" />
+              </div>
+              <div class="row">
+                <h4>{{ days.conditions }}</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-2 forecast-child-{{$index}}" ng-if="$index != 0">
+            <div class="row center">
+              <span class="forecast-date">{{ days.date.weekday }}</span>
+            </div>
+            <div class="col-sm-10 col-sm-offset-1">
+              <div class="row">
+                <img class="forecast-icon" ng-src="Styles/icons/{{ days.icon }}.png" />
+              </div>
+              <div class="row center">
+                <span class="forecast-highlow-temp-otherday">{{ days.high.fahrenheit }}&deg;F</span>
+              </div>
+              <div class="row center">
+                <span class="forecast-highlow-temp-otherday">{{ days.low.fahrenheit }}&deg;F</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-offset-3 col-sm-6">
+        <h1>{{ main.clock | date:'hh:mm:ss '}}</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-offset-3 col-sm-6">
+        <div ng-hide="main.usersName != null">
+          <form role="form" novalidate>
+            <h2 class="greeting">What's your name?</h2><input type="text" ng-model="main.user.name" placeholder="Enter name" required/>
+            <div class="col-sm-6 col-sm-offset-3">
+              <button class="btn btn-clear" type="button" ng-click="main.update(user)">Submit</button>
+            </div>
+          </form>
+        </div>
+        <div ng-show="main.usersName != null">
+          <h2 class="greeting">{{main.greeting}} {{main.usersName}}</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="Scripts/angular-local-storage.min.js"></script>
+  <!-- Modules -->
+  <script src="Scripts/app.js"></script>
+
+  <!-- Controllers -->
+  <script src="Scripts/Controllers/MainController.js"></script>
+
+  <!-- Services -->
+  <script src="Scripts/Services/geolookup.js"></script>
+  <script src="Scripts/Services/forecast.js"></script>
+  <script src="Scripts/Services/chromecastbackground.js"></script>
+  <script src="Scripts/Services/greeting.js"></script>
+</body>
+
+</html>
