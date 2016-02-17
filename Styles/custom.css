@@ -13,19 +13,11 @@ body {
   background-repeat: no-repeat;
   color: #FFFFFF;
   overflow-x:hidden;
+  background-size:cover;
 }
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
-}
-
-#background, #background li {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: no-repeat;
 }
 
 @media screen and (min-width:2560px) {
