@@ -28,6 +28,12 @@ body {
     background: no-repeat;
 }
 
+@media screen and (min-width:1670px) {
+  #background, #background li {
+    background-size:100%;
+  }
+}
+
 #background {
     margin: 0;
     padding: 0;
