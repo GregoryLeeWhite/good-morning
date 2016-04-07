@@ -35,7 +35,7 @@ function Main(forecast, $timeout, chromecastbackground, geolookup, $q, greeting)
 
   var tick = function() {
     vm.clock = Date.now() // get the current time
-
+    vm.decideGreeting();
     $timeout(tick, vm.tickInterval); // reset the timer
   };
 
